@@ -1,0 +1,496 @@
+@import "./colors";
+
+a {
+    color: #000000;
+    cursor: pointer;
+}
+
+//NAVIGATION HEADER
+.header {
+    padding: 0em 2em;
+    font-size: 1.6rem;
+    &__main {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        // flex-wrap: wrap;
+    }
+
+    //LOGO
+    &__logo {
+        order: 1;
+        padding: 2em 0em;
+
+        img {
+            width: 100px;
+            height: 40px;
+            display: block;
+        }
+    }
+    //LINK NAVIGATION
+    &__nav {
+        order: 2;
+        display: block;
+        margin-left: 0em;
+
+        display: flex;
+        flex-direction: row;
+
+        li {
+            list-style-type: none;
+        }
+        a {
+            display: block;
+            padding: 0.625em 0.9375em;
+            font-weight: 700;
+            text-decoration: none;
+        }
+    }
+
+    // SEARCH FIELD
+    &__search {
+        order: 3;
+        width: 50%;
+        max-width: 500px;
+        min-width: 200px;
+        position: relative;
+        font-size: 2rem;
+
+        input {
+            width: 100%;
+            padding: 1em 4em;
+            font-size: inherit;
+
+            outline: none;
+            border: none;
+            background-color: $color-secondary;
+            border-radius: 5em;
+            transition: background-color 0.2s;
+        }
+        input:hover {
+            background-color: $color-secondary-darker;
+        }
+    }
+
+    &__search::before {
+        background-image: url("./icons/search-icon.png");
+        background-size: 20px 20px;
+        background-repeat: no-repeat;
+        position: absolute;
+        content: "";
+        top: 1em;
+        left: 2em;
+
+        padding: 1em 2em;
+        z-index: 10000;
+
+        font-size: inherit;
+    }
+
+    //ICONS NAVIGATION
+    &__icons {
+        order: 4;
+
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+
+    //MENU
+    &__menu--right {
+        order: 5;
+        display: none;
+        i {
+            font-size: 2.5rem;
+        }
+
+        div {
+            list-style: none;
+        }
+    }
+}
+
+.link {
+    cursor: pointer;
+    display: block;
+}
+
+.link:hover {
+    text-decoration: underline;
+}
+
+.icon-fa {
+    display: block;
+    font-size: 2rem; //with font you make the size of icons
+    width: 60px;
+    height: 60px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+.icon-fa:hover {
+    background-color: $color-secondary;
+    border-radius: 50%;
+}
+
+// all over 1280
+@media screen and (max-width: 1280px) {
+    body {
+        //background-color: lightgreen;
+    }
+    //HEADER
+    .header {
+        &__main {
+            justify-content: stretch;
+        }
+        &__nav {
+            display: none;
+        }
+
+        // SEARCH FIELD
+        &__search {
+            order: 3;
+            width: 100%;
+            max-width: 1000px;
+            // min-width: 200px;
+            margin: 0em 3em;
+            font-size: 1.5rem;
+
+            input {
+                width: 100%;
+            }
+        }
+
+        &__search::before {
+            //padding: 0.8em 2em;
+
+            //font-size: inherit;
+        }
+
+        &__menu--right {
+            display: unset;
+        }
+    }
+}
+
+// all over 769 landscape
+@media screen and (max-width: 769px) {
+    body {
+        //background-color: rgb(144, 224, 238);
+    }
+    .header {
+        &__main {
+            flex-wrap: wrap;
+        }
+
+        //LOGO
+        &__logo {
+            order: 1;
+            flex-grow: 1;
+
+            img {
+            }
+        }
+
+        // SEARCH FIELD
+        &__search {
+            order: 3;
+            padding: 0em;
+            margin: 0em 0em;
+        }
+
+        //ICONS NAVIGATION
+        &__icons {
+            order: 2;
+            flex-shrink: 1;
+            text-align: right;
+        }
+
+        //MENU
+        &__menu--right {
+            order: 5;
+            display: unset;
+
+            li {
+            }
+        }
+    }
+}
+
+// all under 481 smartphone
+@media screen and (max-width: 481px) {
+    body {
+        //background-color: rgb(216, 144, 238);
+    }
+    .header {
+        &__main {
+            flex-wrap: wrap;
+            justify-content: flex-end;
+        }
+
+        //LOGO
+        &__logo {
+            order: 1;
+            flex-grow: 1;
+            padding: 1em 0em;
+
+            img {
+                height: 34px;
+            }
+        }
+
+        // SEARCH FIELD
+        &__search {
+            order: 3;
+            margin: 0em 0em;
+        }
+
+        //ICONS NAVIGATION
+        &__icons {
+            order: 2;
+            flex-shrink: 1;
+
+            .icon-fa {
+                padding: 0em;
+                width: 40px;
+                height: 40px;
+            }
+        }
+
+        //MENU
+        &__menu--right {
+            order: 5;
+            display: unset;
+
+            li {
+            }
+        }
+    }
+}
+
+footer {
+    bottom: 0;
+    position: fixed;
+}
+
+//# MENU
+
+.menu-box {
+    width: 40%;
+    background-color: white;
+    height: 100vh;
+    position: absolute;
+    top: 0px;
+    left: -100%;
+    z-index: 1000000;
+    transition: left 0.4s;
+    overflow-y: scroll;
+
+    .menu-top {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0em 3em;
+
+        .menu__logo {
+            width: 100px;
+            padding: 2.8em 0em;
+        }
+    }
+    .menu-container {
+        padding: 0em 3em;
+
+        .menu__nav {
+            list-style-type: none;
+            padding-top: 3em;
+
+            li {
+                font-size: 4rem;
+                font-weight: 700;
+                padding-bottom: 1.2em;
+            }
+        }
+    }
+}
+
+.menu-box-visible {
+    left: 0%;
+}
+
+//CLOSE
+.icon-container {
+    width: 60px;
+    height: 60px;
+
+    cursor: pointer;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.icon-container:hover {
+    background-color: $color-secondary;
+    border-radius: 50%;
+}
+.icon {
+    display: block;
+    width: 16px;
+    height: 16px;
+}
+
+.overlay-menu {
+    display: block;
+    position: fixed;
+    z-index: 7999;
+    top: 0;
+    bottom: 0px;
+    right: 0px;
+    left: 0px;
+    background-color: #000;
+    transition: all 0.2s ease;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.overlay-filter {
+    display: block;
+    position: fixed;
+    z-index: 7999;
+    top: 0;
+    bottom: 0px;
+    right: 0px;
+    left: 0px;
+    background-color: #000;
+    transition: all 0.2s ease;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.overlay-visible {
+    opacity: 0.25;
+    pointer-events: all;
+}
+
+.btn {
+    border: 0px;
+    //padding:8px;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.btn-small {
+}
+
+//# Media Queries for SideMenu
+
+// all over 769 landscape
+@media screen and (max-width: 769px) {
+    .menu-box {
+        width: 60%;
+    }
+}
+
+// all under 481 smartphone
+@media screen and (max-width: 481px) {
+    .menu-box {
+        width: 100%;
+    }
+}
+
+
+//# FILTER
+
+
+.filter-box {
+    width: 40%;
+    background-color: white;
+    height: 100vh;
+    position: absolute;
+    top: 0px;
+    right: -100%;
+    z-index: 1000000;
+    transition: right 0.4s;
+    overflow-y: scroll;
+
+    .filter-top {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0em 3em;
+
+        .menu__logo {
+            width: 100px;
+            padding: 2.8em 0em;
+        }
+    }
+    .filter-container {
+        padding: 0em 3em;
+
+        .filter__nav {
+            list-style-type: none;
+            padding-top: 3em;
+
+            li {
+                font-size: 2rem;
+                font-weight: 700;
+                padding-bottom: 0.5em;
+            }
+        }
+    }
+}
+
+.filter-box-visible {
+    right: 0%;
+}
+
+
+
+
+//# Media Queries for SideMenu
+
+// all over 769 landscape
+@media screen and (max-width: 769px) {
+    .filter-box {
+        width: 60%;
+    }
+}
+
+// all under 481 smartphone
+@media screen and (max-width: 481px) {
+    .filter-box {
+        width: 100%;
+    }
+}
+
+
+
+
+// //# Media Queries COLORS
+//
+// // all over 1280
+// @media screen and (max-width: 1280px) {
+//     body {
+//         background-color: lightgreen;
+//     }
+//
+//
+// }
+//
+// // all over 769 landscape
+// @media screen and (max-width: 769px) {
+//     body {
+//         background-color: rgb(144, 224, 238);
+//     }
+//
+// }
+//
+// // all under 481 smartphone
+// @media screen and (max-width: 481px) {
+//     body {
+//         background-color: rgb(216, 144, 238);
+//     }
+//
+// }

@@ -1,0 +1,14 @@
+.filter-button-all .filter-button__icon {
+  display: inline-flex;
+  align-items: center;
+}
+
+.filter-button-all .filter-button__icon::after {
+  content: "";
+  background-repeat: no-repeat;
+  background-size: 1em 1em;
+  margin-left: 0.5em;
+  width: 1em;
+  height: 1em;
+}
+/*# sourceMappingURL=FilterButton.min.css.map */
