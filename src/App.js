@@ -172,7 +172,7 @@ function App() {
           </div>
         </aside>
 
-        <aside className="filter-box filter-box-visible">
+        <aside className="filter-box">
           <div className="filter-top">
             <div className="filter__logo">
               <img src={ logo } alt="logo" />
@@ -226,16 +226,16 @@ function App() {
           <footer>
             <div>
               Icons made by
-          { ' ' }
+              { ' ' }
               <a href="https://www.flaticon.com/authors/chanut" title="Chanut">
                 Chanut
-          </a>
+              </a>
               { ' ' }
-          from
-          { ' ' }
+              from
+              { ' ' }
               <a href="https://www.flaticon.com/" title="Flaticon">
                 www.flaticon.com
-          </a>
+              </a>
             </div>
           </footer>
 
