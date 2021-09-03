@@ -1,12 +1,10 @@
-import React, { useState, useContext, useRef, useEffect } from 'react';
-import './DropdownRadio.scss';
-import { MyContext } from "../../App";
+import React, { useContext, useRef, useEffect } from 'react';
+import './_DropdownRadio.scss';
+import { MyContext } from "../Navigation/Navigation.js";
 
 export default function DropdownRadio( { items, name, title, style } ) {
-    //const [sort, setSort] = useState( '' );
 
     let { sort, setSort } = useContext( MyContext );
-
     const ref = useRef();
 
     /**
@@ -61,7 +59,7 @@ export default function DropdownRadio( { items, name, title, style } ) {
         } );
     }, [] );
 
-    // use ref if you want to close the dropdown by clicking on the background
+    //! use ref if you want to close the dropdown by clicking on the background
     //!console.log( ref.current );
 
     return (
@@ -94,10 +92,8 @@ export default function DropdownRadio( { items, name, title, style } ) {
                             </label>
                         );
                     } ) }
-
                 </div>
             </div>
-
         </div>
     );
 }

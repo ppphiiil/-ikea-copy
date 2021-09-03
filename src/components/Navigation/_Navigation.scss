@@ -1,4 +1,4 @@
-@import "./colors";
+@import "../../style/colors";
 
 a {
     color: #000000;
@@ -74,7 +74,7 @@ a {
     }
 
     &__search::before {
-        background-image: url("./icons/search-icon.png");
+        background-image: url("../../icons/search-icon.png");
         background-size: 20px 20px;
         background-repeat: no-repeat;
         position: absolute;
@@ -138,9 +138,7 @@ a {
 
 // all over 1280
 @media screen and (max-width: 1280px) {
-    body {
-        //background-color: lightgreen;
-    }
+
     //HEADER
     .header {
         &__main {
@@ -178,9 +176,7 @@ a {
 
 // all over 769 landscape
 @media screen and (max-width: 769px) {
-    body {
-        //background-color: rgb(144, 224, 238);
-    }
+
     .header {
         &__main {
             flex-wrap: wrap;
@@ -222,9 +218,7 @@ a {
 
 // all under 481 smartphone
 @media screen and (max-width: 481px) {
-    body {
-        //background-color: rgb(216, 144, 238);
-    }
+
     .header {
         &__main {
             flex-wrap: wrap;
@@ -264,9 +258,6 @@ a {
         &__menu--right {
             order: 5;
             display: unset;
-
-            li {
-            }
         }
     }
 }
@@ -381,9 +372,6 @@ footer {
     cursor: pointer;
 }
 
-.btn-small {
-}
-
 //# Media Queries for SideMenu
 
 // all over 769 landscape
@@ -400,9 +388,7 @@ footer {
     }
 }
 
-
 //# FILTER
-
 
 .filter-box {
     width: 40%;
@@ -446,9 +432,6 @@ footer {
     right: 0%;
 }
 
-
-
-
 //# Media Queries for SideMenu
 
 // all over 769 landscape
@@ -465,32 +448,3 @@ footer {
     }
 }
 
-
-
-
-// //# Media Queries COLORS
-//
-// // all over 1280
-// @media screen and (max-width: 1280px) {
-//     body {
-//         background-color: lightgreen;
-//     }
-//
-//
-// }
-//
-// // all over 769 landscape
-// @media screen and (max-width: 769px) {
-//     body {
-//         background-color: rgb(144, 224, 238);
-//     }
-//
-// }
-//
-// // all under 481 smartphone
-// @media screen and (max-width: 481px) {
-//     body {
-//         background-color: rgb(216, 144, 238);
-//     }
-//
-// }

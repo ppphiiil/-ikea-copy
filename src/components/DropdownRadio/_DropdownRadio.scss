@@ -1,9 +1,9 @@
-@import "../../colors";
-@import "../../fonts";
+@import "../../style/colors";
+@import "../../style/fonts";
 
 .filter {
   font-size: 1.8rem;
-  display:inline-block;
+  display: inline-block;
 
   .filter-button {
     background-color: $color-secondary;
@@ -51,10 +51,6 @@
     display: block;
   }
 
-  .single-select-filter {
-  
-  }
-
   .single-select-filter__item {
     display: flex;
     justify-content: space-between;
@@ -85,8 +81,6 @@
   .radio-button__input.checked {
     border: 1px solid black;
     box-shadow: 0 0 0 0.3em #ffffff inset;
-    // background-color: green;
-    //border:3px solid rgb(255, 255, 255);
     background: rgb(0, 0, 0);
   }
 }

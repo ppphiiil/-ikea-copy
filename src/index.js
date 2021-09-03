@@ -1,11 +1,8 @@
-import 'semantic-ui-css/semantic.min.css'
-import React from "react"
-import App from "./App.js"
-import reactDOM from "react-dom"
+import 'semantic-ui-css/semantic.min.css';
+import React from 'react';
+import reactDOM from 'react-dom';
 
+import App from './App.js';
+import './index.scss';
 
-import './index.scss'
-
-
-
-reactDOM.render( <App />, document.getElementById( "root" ) )
+reactDOM.render (<App />, document.getElementById ('root'));

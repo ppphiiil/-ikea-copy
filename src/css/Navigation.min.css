@@ -70,7 +70,7 @@ a {
 }
 
 .header__search::before {
-  background-image: url("./icons/search-icon.png");
+  background-image: url("../../icons/search-icon.png");
   background-size: 20px 20px;
   background-repeat: no-repeat;
   position: absolute;
@@ -119,6 +119,7 @@ a {
   display: flex;
   justify-content: center;
   align-items: center;
+  cursor: pointer;
 }
 
 .icon-fa:hover {
