@@ -1,23 +1,5 @@
-@import "./_fonts.scss";
-@import "./_colors.scss";
-@import './components/FilterButton/FilterButton.scss';
-@import './components/DropdownRadio/DropdownRadio.scss';
-
-*::before,
-*::after,
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-
-:root {
-  font-size: 62.5%;
-
-  font-family: $font-noto-sans;
-}
-
-
-.filter__main{
-  padding:0em 2em;
-}
+@import "./style/colors";
+@import "./style/fonts";
+@import "./components/FilterButton/FilterButton.scss";
+@import "./components/DropdownRadio/DropdownRadio.scss";
+@import "./style/reset";
