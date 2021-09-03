@@ -6,4 +6,5 @@ I really like copying famous websites :)
 - [ ] add react-router-dom
 - [ ] add footer
 - [x] adding navigation
-...
+- [x] make responsive
+- [x] add useContext
